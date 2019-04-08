@@ -167,4 +167,4 @@ THREE.Ray.prototype.intersectCylinder = (function()
     };
 })();
 
-export { Cylinder };
+module.exports = Cylinder;

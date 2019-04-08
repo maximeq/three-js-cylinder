@@ -1,13 +1,13 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (factory((global.THREECone = {})));
-}(this, (function (exports) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('three-full/builds/Three.cjs.js')) :
+    typeof define === 'function' && define.amd ? define(['three-full/builds/Three.cjs.js'], factory) :
+    (global.THREECone = factory(global.THREE));
+}(this, (function (Three_cjs) { 'use strict';
 
-    const THREE = require("three-full/builds/Three.cjs.js");
+    Three_cjs = Three_cjs && Three_cjs.hasOwnProperty('default') ? Three_cjs['default'] : Three_cjs;
 
-    const Box3 = THREE.Box3;
-    const Vector3 = THREE.Vector3;
+    const Box3 = Three_cjs.Box3;
+    const Vector3 = Three_cjs.Vector3;
 
     /**
      *  @param {Vector3} v The cylinder origin
@@ -18,8 +18,8 @@
      */
     function Cylinder( v, axis, radius, inf, sup ) {
 
-    	this.v = v || new THREE.Vector3();
-        this.axis = axis  || new THREE.Vector3(1,0,0);
+    	this.v = v || new Three_cjs.Vector3();
+        this.axis = axis  || new Three_cjs.Vector3(1,0,0);
         this.radius = radius;
         this.inf = inf || 0;
         this.sup = sup || +Infinity;
@@ -79,7 +79,7 @@
 
     } );
 
-    THREE.Cylinder = Cylinder;
+    Three_cjs.Cylinder = Cylinder;
 
     /**
      *
@@ -100,13 +100,13 @@
      * @return {Vector3} The first hit point if any, null otherwise.
      *
      */
-    THREE.Ray.prototype.intersectCylinder = (function()
+    Three_cjs.Ray.prototype.intersectCylinder = (function()
     {
         // function static variables
-        var vtos = new THREE.Vector3();
-        var tmp  = new THREE.Vector3();
-        var tmp1 = new THREE.Vector3();
-        var tmp2 = new THREE.Vector3();
+        var vtos = new Three_cjs.Vector3();
+        var tmp  = new Three_cjs.Vector3();
+        var tmp1 = new Three_cjs.Vector3();
+        var tmp2 = new Three_cjs.Vector3();
 
         return function( cyl, target)
         {
@@ -173,8 +173,8 @@
         };
     })();
 
-    exports.Cylinder = Cylinder;
+    var Cylinder_1 = Cylinder;
 
-    Object.defineProperty(exports, '__esModule', { value: true });
+    return Cylinder_1;
 
 })));
