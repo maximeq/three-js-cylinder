@@ -30,7 +30,7 @@ build({
     external: [ 'three-full/builds/Three.cjs.js' ],
 }, {
     format: 'umd',
-    name: 'THREECone',
+    name: 'THREECylinder',
     file: './dist/browser/three-js-cylinder.js',
     globals: {
         'three-full/builds/Three.cjs.js' : 'THREE'
@@ -58,7 +58,7 @@ build({
     external: [ 'three-full/builds/Three.cjs.js' ],
 }, {
     format: 'umd',
-    name: 'THREECone',
+    name: 'THREECylinder',
     file: './dist/browser/three-js-cylinder.min.js',
     globals: {
         'three-full/builds/Three.cjs.js' : 'THREE'

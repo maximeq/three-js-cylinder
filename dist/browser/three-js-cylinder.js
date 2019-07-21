@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('three-full/builds/Three.cjs.js')) :
     typeof define === 'function' && define.amd ? define(['three-full/builds/Three.cjs.js'], factory) :
-    (global.THREECone = factory(global.THREE));
+    (global.THREECylinder = factory(global.THREE));
 }(this, (function (Three_cjs) { 'use strict';
 
     Three_cjs = Three_cjs && Three_cjs.hasOwnProperty('default') ? Three_cjs['default'] : Three_cjs;
