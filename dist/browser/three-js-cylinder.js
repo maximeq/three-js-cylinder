@@ -129,7 +129,7 @@
 
             var delta = b*b - 4*a*c;
             if(delta < 0){
-                return 0;
+                return null;
             }else if(delta === 0){
                 var t = (-b-Math.sqrt(delta))/(2*a);
                 this.at(t,target);
