@@ -130,7 +130,7 @@ THREE.Ray.prototype.intersectCylinder = (function()
 
             tmp.subVectors(target,cyl.v);
             var dot = tmp.dot(cyl.axis);
-            if(dot > cyl.inf && dot < cyl.sup){
+            if(t>0 && dot > cyl.inf && dot < cyl.sup){
                 return target;
             }else{
                 return null;
@@ -142,7 +142,7 @@ THREE.Ray.prototype.intersectCylinder = (function()
 
             tmp.subVectors(target,cyl.v);
             var dot = tmp.dot(cyl.axis);
-            if(dot < cyl.inf || dot > cyl.sup){
+            if(t<0 || dot < cyl.inf || dot > cyl.sup){
                 t = Number.MAX_VALUE;
             }
 
@@ -151,7 +151,7 @@ THREE.Ray.prototype.intersectCylinder = (function()
 
             tmp.subVectors(tmp2,cyl.v);
             dot = tmp.dot(cyl.axis);
-            if(dot > cyl.inf && dot < cyl.sup){
+            if(t2>0 && dot > cyl.inf && dot < cyl.sup){
                 if(t2<t){
                     t = t2;
                     target.copy(tmp2);
