@@ -27,13 +27,13 @@ async function build(inputOptions, outputOptions) {
 build({
     input: 'src/Cylinder.js',
     plugins:  [ commonjs(), resolve() ],
-    external: [ 'three-full/builds/Three.cjs.js' ],
+    external: [ 'three-full' ],
 }, {
     format: 'umd',
     name: 'THREECylinder',
     file: './dist/browser/three-js-cylinder.js',
     globals: {
-        'three-full/builds/Three.cjs.js' : 'THREE'
+        'three-full' : 'THREE'
     }
 });
 
@@ -55,13 +55,13 @@ build({
           bracketSpacing:false
         })
     ],
-    external: [ 'three-full/builds/Three.cjs.js' ],
+    external: [ 'three-full' ],
 }, {
     format: 'umd',
     name: 'THREECylinder',
     file: './dist/browser/three-js-cylinder.min.js',
     globals: {
-        'three-full/builds/Three.cjs.js' : 'THREE'
+        'three-full' : 'THREE'
     }
 });
 

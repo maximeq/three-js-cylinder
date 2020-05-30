@@ -1,6 +1,6 @@
 {
   "name": "three-js-cylinder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "THREE.JS Cylinder class, on the model of THREE.Sphere class.",
   "main": "src/Cylinder.js",
   "scripts": {

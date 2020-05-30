@@ -1,4 +1,4 @@
-const THREE = require("three-full/builds/Three.cjs.js");
+const THREE = require("three-full");
 
 const Box3 = THREE.Box3;
 const Vector3 = THREE.Vector3;
